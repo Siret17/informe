@@ -1,0 +1,35 @@
+
+{{>header}}
+<link rel="stylesheet" href="../public/styles/styles.css">
+<div class="container">
+    <center><h1>Mis pintores favoritos</h1></center>
+    {{#if pintores}}
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre popular</td>
+                    <td>Nombre Real</td>
+                    <td>Corriente</td>
+                    <td>Nacionalidad</td>
+                    <td>Imagen</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each pintores}}
+                <tr>
+                    <td>{{_id}}</td>
+                    <td>{{nombreA}}</td>
+                    <td>{{nombreR}}</td>
+                    <td>{{corriente}}</td>
+                    <td>{{nacionalidad}}</td>
+                    <td><img src="../images/{{pintura}}" height="400" width="275"> </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <div>no se encuentran pintores</div>
+    {{/if}}
+</div>
+<h3>AZUL CORDERO</h3>
